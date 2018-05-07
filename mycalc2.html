@@ -1,0 +1,81 @@
+<html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+#text1{
+
+}
+</style>
+<script>
+
+function event1(x){
+		document.getElementById("text1").value+=x;
+}
+function event2(){
+
+		var x = document.getElementById("text1").value;
+		document.getElementById("text1").value = eval(x);
+		var y= eval(x);
+		localStorage.setItem("test",y);
+}
+function event3(){
+		document.getElementById("text1").value = "";
+}
+function event4(){
+		var x = document.getElementById("text1").value;
+		var sillyString = x.slice(0, -1);
+		document.getElementById("text1").value= sillyString;
+}
+
+</script>
+
+</head>
+<body>
+	<a href="C:\Users\kiit1\Desktop\new.html">N</a>
+<center>
+<table border="1">
+<tr>
+	<th colspan=4><h1>Calculator</h1></th>
+</tr>
+<tr >
+	<td colspan=4><input type="text" id="text1" style="text-align:right;"/></td>
+</tr>s
+<tr>
+	<td></td>
+	<td><button type="button" value="/" onClick="event1(this.value)">/</button></td>
+	<td><button type="button" value="*"  onClick="event1(this.value)">*</button></td>
+	<td><button type="button" value="-"  onClick="event1(this.value)">-</button></td>
+	<td><button type="button" value="" onClick="event3(this.value)">C</button></td>
+</tr>
+<tr>
+	<td><button type="button" value="7" onClick="event1(7)">7</button></td>
+	<td><button type="button" value="8" onClick="event1(8)">8</button></td>
+	<td><button type="button" value="9" onClick="event1(9)">9</button></td>
+	<td rowspan=2><button type="button" value="+" style="height:50px;" onClick="event1(this.value)">+</td>
+	<td><button type="button" value="" onClick="event4(this.value)">DEL</button></td>
+</tr>
+<tr>
+	<td><button type="button" value="4" onClick="event1(4)">4</button></td>
+	<td><button type="button" value="5" onClick="event1(5)">5</button></td>
+	<td><button type="button" value="6" onClick="event1(6)">6</button></td>
+</tr>
+<tr>
+
+	<td><button type="button" value="1" onClick="event1(1)">1</button></td>
+	<td><button type="button" value="2" onClick="event1(2)">2</button></td>
+	<td><button type="button" value="3" onClick="event1(3)">3</button></td>
+	<td rowspan=2><button type="button" style="height:48px;"  onClick="event2()" >=</button></td>
+</tr>
+<tr>
+	<td colspan=2><button type="button" onClick="event1(0)">0</button></td>
+</tr>
+<tr>
+	<td><input type="text" value="">Answer</button></td>
+</tr>
+
++</table>
+</center>
+</body>
+</html
+</html>
